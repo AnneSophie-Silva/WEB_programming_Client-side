@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+   
+<body>
+    <h1> Dados de acesso </h1>
+    
+    <form action="#" method="get">
+        <fieldset>
+            <legend> Login </legend>
+
+            <label for="user"> Utilizador </label>
+
+            <!-- Required obriga a introduzir dados-->
+             <!-- Autofocus coloca logo no local para escrever || E não podemos ter dois autofocus-->
+            <input type="text" id="user" required autofocus>       
+                                                                   
+            <label for="pass"> Password </label>                    <!--Não queremos que a password se veja-->
+            <input type="password" id="pass" required autofocus>    <!--Usamos type passwrod e já não aparece-->
+                                                                
+
+            <div class="actions">
+                <input type="submit" name= "bt_enviar" value="Enviar" id="" class="botao">  <!--Permite submeter o texto -->
+                <input type="reset" name= "bt_limpar" value="Limpar" id="" class="botao bt_limpar">   <!--Permite limpar o que esta escrito -->
+            </div>
+
+        </fieldset>
+
+    </form>
+    
+
+</body>
+</html>

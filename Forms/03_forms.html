@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objetos de formulário</title>
+    <link rel="stylesheet" href="estilo_forms.css">
+    <link rel="icon" type="image/x-icon" href="form.png">
+
+</head>
+<body>
+    <h1><img src="survey-fill.svg" alt="Computer" class="image"> Objetos de formulario </h1>
+
+    <form style= "text-align: center" action="#" autocomplete="off">
+        <fieldset>
+            <legend> Dados Pessoais </legend>
+            <label class="labels" for=""> Nome</label>
+            <!-- Só deixa colocar no máximo 20 caracteres -->
+            <input type="text" maxlength="100" placeholder="Indique o seu nome">      
+            <br>
+
+            <label class="labels" for="email"> Email</label>
+            <!-- Limita os dados para input, só permite colocar um email -->
+            <input type="email" placeholder="Digite um email válido" id="email">
+            <br>
+            
+            <label for="agregado"> Agregado familiar </label>
+            <!-- Aparece a seta para colocar o numero mas coloca numero negativos, por isso min e max -->
+            <!-- Se quiser algum valor por defeito coloco value, vai aparecer 1 por agregado familiar -->
+            <input type="number" min="0" max="20" id="agregado" value="1">  
+            <br>
+
+            <label for="data"> Data de nascimento </label>
+            <input type="date" min="1990-05-08" max="2023-05-08" id="data">
+            <br>
+
+            <b> Possui algum rendimento extra? </b>
+            <!-- Label permite que se carrege em cima da palabra para selecionar o ponto -->
+            <!-- Por uma questão de facilidade || É necessário colocar label em todos os inputs -->
+            <label>
+            <!-- Ao colocar o mesmo nome permite selecionar só um deles, senão da para selecionar os dois, assim eles ficam ligados -->
+            <!-- Ao colocar o Sim, se não tiver value ele passa sem nada -->
+            <!-- Temos que dizer que quando carrega no Sim, ele vai para a base de dados gravar com "s" -->
+                <input type="radio" name="atividade" value="s"> Sim
+            </label>
+            <label>
+                <input type="radio" name="atividade" value="n"> Não
+            </label>
+            <br>
+            
+            <b> Sexo: </b>
+            <input type="radio" name="sexo" id=""> Feminino     <!-- Nome diferente do rendimento-->
+            <input type="radio" name="sexo" id=""> Masculino
+        </fieldset>
+
+
+
+
+        <fieldset>
+            <legend> Áreas de interesse </legend>
+            <label> Linguagens de programação
+                <input type="checkbox" name="interesse" value="html"> HTML
+            </label>
+            <label>
+                <input type="checkbox" name="interesse"value="css"> CSS
+            </label>
+            <label>
+                <input type="checkbox" name="interesse"value="javascript"> JavaScript
+            </label>
+
+            <br>
+            <br>
+
+            <label> Escolha uma linguagem
+            <br>
+            <br>
+                <!-- Size é o numero de linhas -->
+                <!-- Multiple já permite selecionar várias opções ao mesmo tempo -->
+                <select style="text-align:center" name="linguagem" id="" size="8" multiple>
+                    <!-- Grupo de opções -->
+                    <optgroup label="Frontend">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javascript">JavaScript</option>
+                    </optgroup>
+                    <optgroup label="Backend">
+                        <option value="java">Java</option>
+                        <option value="phyton">Phyton</option>
+                    </optgroup>
+
+                </select>
+
+                <br>
+                <br>
+                Indique uma linguagem: 
+                <!-- Só deixa uma opção e a medida que escrevemos vai filtrando -->
+                <input type="text" list="lista"> 
+                    <datalist id="lista">
+                        <option value="HTML">
+                        <option value="CSS">
+                        <option value="JavaScript">
+                        <option value="Java">
+                        <option value="Phyton">
+                    </datalist>
+            </label>
+        </fieldset>
+
+
+
+
+        <fieldset>
+            <legend> Mensagem </legend>
+
+            <textarea class="texto" cols="100" rows="7" maxlength="30" placeholder="Escreva aqui a sua opinião"></textarea>
+
+            <br>
+            <br>
+
+            <!-- Readonly não deixa que se mexa no texto, apenas para leitura -->
+            <!-- O texto aparece com tabs  -->
+            <textarea cols="100" rows="10" readonly>
+Contrato de utilização
+    Regra 1 - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus ullam dolorum eaque molestiae officiis neque dignissimos perferendis nobis sapiente mollitia.
+    Regra 2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, fugiat. Sapiente laboriosam consequuntur aliquam voluptate provident obcaecati, molestiae fugit repellendus!
+    Regra 3 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laboriosam inventore sint culpa numquam sunt, obcaecati modi assumenda corrupti perspiciatis!
+            </textarea>
+
+            <br>
+            <label>
+            <input type="checkbox"> Li e aceito o contrato
+            </label>
+
+            <br>
+            <br>
+            <br>
+            <!-- Botão para escolher um ficheiro para anexar -->
+            <input type="file">
+
+            <!-- Isto não se vê, é texto escondido -->
+            <input type="hidden" value="Texto escondido"> 
+        
+        </fieldset>
+        <br>
+        
+        <!-- Estes já fazem parte e tem a sua função -->
+        <input style="background-color: #aaf3d1" class="botao" type="submit">
+        <input style="background-color: #de5e5e" class="botao" type="reset">
+
+        <!-- Não é um botão do formulario -->
+        <!-- Podemos personalizar um botão -->
+        <input style="background-color:#fbffc4"class="botao" type="button" value="OK">
+
+        <!-- Com o button consigo formatar -->
+        <button style="background-color: #aaf3d1" class="botao" type="submit"><b><i>Submeter</i></b></button>
+        <button style="background-color: #de5e5e" class="botao" type="reset"><b><i>Repor</i></b></button>
+        <button style="background-color:#fbffc4" class="botao" type="button"><b><i>OK</i></b></button>
+           
+        <!-- Caixa de procura -->
+        <input class="botao" type="search">
+
+        <br>
+        <br>
+        <br>
+    </form>
+
+    <form>
+    <h2 class="obj"> &#128214 Mais objetos  </h2>
+    
+    <div class="mais_tempo">
+        <!-- Step é andar no passo de 1 em 1 -->
+        <input type="range" min="0" max="10" step="1"> Range
+        <br>
+        <br>
+
+        <!-- Escolher hora ou escrever -->
+        <input type="time"> Horas
+        <br>
+        <br>
+        <!-- Palete de cores -->
+        <input type="color"> Paleta de cores
+    </div>
+
+    
+    <br>
+    <br>
+
+    <div class="mais">
+   
+
+    <!-- Valor entre 30 e 70 verde, abaixo  e acima fica amarelo-->
+    <!-- Optimum altera a escala, optimum a 100 é o ideal-->
+    <label>Meter
+    <br>
+    <meter min="0" max="100" low="30" high="70" value="60" optimum="100"></meter> 
+    <br>
+    <br>
+
+    <!-- Percentagem de objetivo cumprido -->
+    <label> % de objetivo cumprido
+    <br>
+    <!-- Algum browser podem não suportar esta tag -->
+    <!-- Nesse em vez da barra vai aparecer a percentagem, os 70% -->
+    <progress max="100" value="70"></progress>
+    </label>    
+
+    <br>
+    <br>
+
+    <label style="text-align: center" oninput="resultado.value= a.value * b.value"> Calculadora
+    <br>
+        <input type="number" name="a" id="a"> *
+        <input type="number" name="b" id="b"> =
+
+        <output name="resultado" for="a b"></output>
+
+    
+    </div>
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>
