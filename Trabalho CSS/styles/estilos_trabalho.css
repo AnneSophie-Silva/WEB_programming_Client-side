@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #bfc2c3;
+}
+
+.top {
+    /* O ../ significa uma pasta para trás, porque as imagens estão em outra pasta */
+    background-image: url(../imagens/bg-3.jpg);
+    height:500px;
+    /* Cola mais acima, retira espaço que tem em cima */
+    padding: 1px;
+    background-size:cover;
+    background-position: center;
+}
+
+/* Sublcasse do top onde tem dentro o nav, e o ul */
+.top nav ul {
+    margin: 20px 80px 0px 0px;
+    text-align: right;
+}
+
+.top nav li {
+    list-style-type: none;
+    border: 1px solid white;
+    display: inline-block;
+}
+
+.top nav a {
+    color: white;
+    font-size: 12px;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+    /* Aumentar o espaço entre as letras */
+    letter-spacing: 2px;
+    background-color: #00000078;
+
+}
+.top nav a:hover {
+    color:white;
+    background-color: #0c0905c5;
+}
+
+.top_conteudo h1 {
+    color:white;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px black;
+}
+
+.top_conteudo p {
+    background-color: #000000cb;
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    padding: 10px;
+    border-bottom: 2px solid white;
+}
+
+.top_conteudo {
+    text-align: center;
+    
+}
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+article {
+    background-color: #fff;
+    padding: 16px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+article h2 {
+    border-bottom: 2px solid #ccc;
+    background-color: #eee;
+    padding: 10px;
+    margin-top: 0;
+
+}
+
+.botao {
+    background-color: #acb8d1;
+    display: block;
+    padding: 12px 12px;
+    width: fit-content;
+    margin-left: auto;
+    border-radius: 10px;
+    text-shadow: 3px 3px 5px white;
+}
+
+footer{
+    color:white;
+    background-color: #2a2a2aa5;
+    text-align: center;
+    padding: 20px;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 5px white;
+}
+
+
+
