@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio </title>
+</head>
+<body>
+    
+    <h1>Exercico JavaScript</h1>
+
+    <button onclick="numero()"> Clique para inserir os números</button>
+
+    <p id="numero1">Os numero vão aparecer aqui</p>
+  
+    
+    <!-- <script>
+        function numero() {
+            var n1 = Number(window.prompt('Digite o primeiro número: '));
+            var n2 = Number(window.prompt('Digite o segundo número: '));
+
+            maior = Math.max(n1, n2)
+
+            let numero1  = document.querySelector('p#numero1');
+            numero1.innerHTML = (`<p> Os numeros foram ${n1} e ${n2} . </p>`);
+            numero1.innerHTML += (`<p> O maior numero é ${maior} . </p>`);
+        }
+
+    </script>  -->
+
+
+
+        <script>
+
+        function numero(){
+            var n1 = Number(window.prompt('Digite o primeiro número: '));
+            var n2 = Number(window.prompt('Digite o segundo número: '));
+
+            let numero1  = document.querySelector('p#numero1');
+            numero1.innerHTML = (`<p> Os numeros foram ${n1} e ${n2} . </p>`);
+
+            if (n1>n2) {
+                numero1.innerHTML += (`O maior número é ${n1}`)
+            } 
+            else {
+                numero1.innerHTML += (`O maior número é ${n2}`)
+            }
+   
+        }
+
+    </script> 
+
+    
+
+</body>
+</html>

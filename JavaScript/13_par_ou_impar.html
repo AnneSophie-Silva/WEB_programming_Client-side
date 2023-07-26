@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio </title>
+</head>
+<body>
+    
+    <h1>Exercico JavaScript</h1>
+
+    <button onclick="numero()"> Clique para inserir um número</button>
+
+    <p id="numero1">O numero vai aparecer aqui</p>
+  
+    
+    <script>
+        function numero() {
+            var n1 = Number(window.prompt('Digite o primeiro número: '));
+            let numero1  = document.querySelector('p#numero1');
+            numero1.innerHTML = (`<p> O numero é ${n1}. </p>`);
+
+            result = n1%2
+
+            if (result == 0) {
+                numero1.innerHTML += (`<p> O numero é par. </p>`)
+            }
+            else {
+                numero1.innerHTML += (`<p> O numero é impar. </p>`)
+            }
+
+            
+        }
+
+    </script> 
+
+
+    
+
+</body>
+</html>

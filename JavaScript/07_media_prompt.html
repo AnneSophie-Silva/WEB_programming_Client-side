@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Média</title>
+</head>
+
+<body>
+
+    <h1>Média num promp</h1>
+    <button onclick="nome()"> Clique para indicar o seu nome</button>
+    <button onclick="media()"> Clique para inserir os números</button>
+    <p id="nome1"></p> 
+    <p id="media1"></p> 
+
+    <script>
+
+        function nome(){
+            var name = String(window.prompt("Qual o seu nome?"));
+            var nome1 = document.querySelector('p#nome1');
+            nome1.innerHTML = (`Média do aluno ${name}.`);
+        }   
+
+        function media() {
+            var n1 = Number(window.prompt('Digite o primeiro número: '));
+            var n2 = Number(window.prompt('Digite o segundo número: '));
+
+            mean = (n1 + n2)/2;
+
+            var media1  = document.querySelector('p#media1');
+            media1.innerHTML += (`<p> As notas foram ${n1} e ${n2} . </p>`);
+            media1.innerHTML += (`<p> A média é ${mean} . </p>`);
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

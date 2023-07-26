@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Datas </title>
+</head>
+<body>
+
+    <h1>Datas</h1>
+    <button onclick="mostra_datas()">Clique para saber a data de hoje</button>
+
+    <section id="result">
+        <p>Aqui vai aparecer a data atual</p>
+    </section>
+
+    <script>
+        var data_atual = new Date();
+        var res = document.querySelector('section#result');
+        var aniversario = new Date('1998-09-30');
+
+
+        function mostra_datas(){
+
+            var meses = new Array('Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez');
+
+            var dia_semana = new Array('Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabado');
+
+            res.innerHTML = (`<p>A data atual é ${data_atual}</p>`);
+            res.innerHTML = (`<p>A data atual é ${aniversario}</p>`);
+            // getDay é um indice, com Domingo a começar no 0
+            res.innerHTML += (`<p>O dia da semana é ${data_atual.getDay()}</p>`); 
+            res.innerHTML += (`<p>O dia da semana por extenso é ${dia_semana[data_atual.getDay()]}</p>`); 
+            // getDate para retirar o dia do mês (começa em 1)
+            res.innerHTML += (`<p>O dia do mês é ${data_atual.getDate()}</p>`);  
+            // getMonth onde Janeiro começa como 0
+            res.innerHTML += (`<p>O mês é ${data_atual.getMonth()}</p>`); 
+            res.innerHTML += (`<p>O mês abreviado é ${meses[data_atual.getMonth()]}</p>`); 
+            // getYear começa em 1900 
+            res.innerHTML += (`<p>O ano é ${data_atual.getYear()}</p>`); 
+            // getFullYear dá o ano
+            res.innerHTML += (`<p>O ano é ${data_atual.getFullYear()}</p>`); 
+
+            res.innerHTML += (`<p>A hora é ${data_atual.getHours()}</p>`); 
+            res.innerHTML += (`<p>Os minutos são ${data_atual.getMinutes()}</p>`); 
+            res.innerHTML += (`<p>Os segundos são ${data_atual.getSeconds()}</p>`); 
+            // Os milissegundos aprtir de 1970
+            res.innerHTML += (`<p>O tempo é ${data_atual.getTime()}</p>`); 
+            // Para concatenar horas, minutos e segundos
+            res.innerHTML += (`<p>O tempo é ${data_atual.getHours()}:${data_atual.getMinutes()}:${data_atual.getSeconds()}</p>`); 
+
+            res.innerHTML += (`<p>Nasci numa ${dia_semana[aniversario.getDay()]}</p>`); 
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
