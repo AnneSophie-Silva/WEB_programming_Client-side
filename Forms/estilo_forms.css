@@ -1,0 +1,141 @@
+html {
+    background-color:#edecec;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+}
+
+h1 {
+    color:black;
+    text-transform: uppercase;
+    text-align: center;
+    margin:auto;
+    letter-spacing: 2px;
+    font-size: 45px;
+    padding: 15px 5px 15px 5px;
+    background-color: antiquewhite;
+    display: block;
+    border: double brown;
+    margin-left: 15%;
+    margin-right: 15%;
+
+}
+
+.image {
+    float: center left;
+    width: 40px;
+}
+
+legend{
+    padding: 0.25em;
+    margin: 0px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: antiquewhite;
+    display:block;
+    border: double brown;
+}
+
+fieldset{
+    background-color: #ecf0f1;
+    width: 85%;
+    border-radius: 10px 5px 5px 0px;
+    box-shadow: 3px 3px 10px black ;
+    padding: 20px;
+    border: 2px;
+    margin:auto;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: left;
+    
+}
+
+
+input{
+    padding: 0.25em;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    border: 1px solid #bbb;
+    font-size: 0.6em;
+    margin-left:16px;
+    text-align: center;
+}
+
+
+.mais {
+    background-color: #ecf0f1;
+    width: 85%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px black ;
+    padding: 10px 20px 10px 20px;
+    border: 2px;
+    margin:auto;
+    text-align: center;
+    font-size: 20px;
+    margin-top: -15px;
+    margin-bottom: 25px;
+}
+
+.mais_tempo {
+    background-color: #ecf0f1;
+    width: 85%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px black ;
+    padding: 40px 20px 5px 20px;
+    border: 2px;
+    margin: auto;
+    text-align: center;
+    display: inline block;
+    font-size: 20px;
+    margin-bottom:2px;
+    
+}
+
+.botao{
+    margin-left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+
+label{
+    text-align: left;
+
+}
+
+.obj{
+    background-color: antiquewhite;
+    padding: 0.25em;
+    font-size: 25px;
+    margin: auto;
+    display: block;
+    margin-left: auto;
+    width: 200px;
+    text-align: center;
+    margin-bottom: -25px;
+    position: relative;
+    border: double brown;
+}
+
+textarea{
+    background-color: #f4f2f7;
+}
+
+
+form{
+    background-color: #cedbe6;
+    margin: 5%;
+    border-radius: 20px;
+    margin-top: 25px;
+    padding: 20px 15px 20px 15px;
+    margin-bottom: 40px;
+    border: dotted black;
+}
+
+
+.pc{
+    background-image: url("computer-line.png");
+    display: block;
+    margin: 40px;
+    margin-right: 62px;
+
+}
